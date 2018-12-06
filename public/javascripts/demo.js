@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	Vue.component('item-row', {
+Vue.component('item-row', {
   template: '#item-row',
   props: {
     item: Object
@@ -17,11 +17,10 @@ $(document).ready(function(){
       method: 'DELETE',
       url: '/api/item/' + that.item._id,
       success: function(res){
-        that.$remove()
+        that.$remove();
       }
     })
-  },
-    // ajax call for updating an Item
+  }, // ajax call for updating an Item
     updateItem: function () {
       var that = this;
       $.ajax({
@@ -64,6 +63,7 @@ var item = new Vue({
         url: '/api/item',
         success: function(res) {
           that.items = res
+          that.editMode = false
         },
         errror: function(res){
           that.errors = res.responseJSON.errors

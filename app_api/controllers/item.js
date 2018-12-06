@@ -35,6 +35,40 @@ module.exports.itemCreate = function(req, res) {
     }
   });
 };
+/* PUT /api/item/:itemId */
+module.exports.itemUpdateOne = function(req, res) {
+  if (!req.params.itemId) {
+    sendJSONresponse(res, 404, {
+      "message": "Not found, itemID is required"
+    });
+    return;
+  }
+  Item
+    .findById(req.params.itemId)
+    .exec(
+      function(err, item) {
+        if (!item) {
+          sendJSONresponse(res, 404, {
+            "message": "itemid not found"
+          });
+          return;
+        } else if (err) {
+          sendJSONresponse(res, 400, err);
+          return;
+        }
+        item.name = req.body.name;
+        item.details = req.body.details;
+        item.save(function(err, item) {
+          if (err) {
+            sendJSONresponse(res, 404, err);
+          } else {
+            sendJSONresponse(res, 200, item);
+          }
+        });
+      }
+  );
+};
+
 
 /* DELETE  */
 module.exports.findOneAndDelete = function(req, res) {

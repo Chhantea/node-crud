@@ -1,8 +1,8 @@
 var mongoose = require('mongoose');
 
 var itemSchema = new mongoose.Schema({
-	name: {type: String, required: true},
-	details: {type: String, required: true},
+	name: String,
+	details: String,
 	createdAt: {
         type: Date,
         "default": Date.now
