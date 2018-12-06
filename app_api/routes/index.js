@@ -5,7 +5,7 @@ var ctrlItem = require('../controllers/item');
 // items routes
 router.get('/item', ctrlItem.item);
 router.post('/item', ctrlItem.itemCreate);
-router.delete('/item/:itemId', ctrlItem.itemDelete);
+router.delete('/item/:itemId', ctrlItem.findOneAndDelete);
 
 
 module.exports = router;

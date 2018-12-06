@@ -37,19 +37,19 @@ module.exports.itemCreate = function(req, res) {
 };
 
 /* DELETE  */
-module.exports.itemDelete = function(req, res) {
+module.exports.findOneAndDelete = function(req, res) {
   var itemId = req.params.itemId;
   if (itemId) {
     Item
       .findByIdAndRemove(itemId)
       .exec(
-        function(err, location) {
+        function(err, item) {
           if (err) {
             console.log(err);
             sendJSONresponse(res, 404, err);
             return;
           }
-          console.log("Location id " + itemId + " deleted");
+          console.log("Item id " + itemId + " deleted");
           sendJSONresponse(res, 204, null);
         }
     );

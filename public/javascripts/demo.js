@@ -15,7 +15,7 @@ $(document).ready(function(){
     var that = this
     $.ajax({
       method: 'DELETE',
-      url: '/api/item/' + that.item.id,
+      url: '/api/item/' + that.item._id,
       success: function(res){
         that.$remove()
       }
@@ -29,7 +29,7 @@ $(document).ready(function(){
         data: {
           item: that.item,
         },
-        url: '/api/item/' + that.item.id,
+        url: '/api/item/' + that.item._id,
         success: function(res) {
           that.errors = {}
           that.item = res
