@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/mdbootstrap/css/bootstrap.css' />
+    <link rel='stylesheet' href='/mdbootstrap/css/mdb.css' />
+    <link rel='stylesheet' href='/mdbootstrap/css/mdb.lite.css' />
+    <script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous">  	
+	</script>
+  <script src="/javascripts/vue.js"></script>
+  <script src="/javascripts/demo.js"></script>
+  </head>
+  <body>
+  	<div class="jumbotron">
+    <h1 class="animated zoomInUp"><%= title %></h1>
+    <p class="animated slideInDown">Welcome to <%= title %></p>
+    <div id="app">
+      <div class="row">
+          <div class="col-md-4">
+            <!-- Input -->
+            <input type="text" v-model="item.name"><br>
+            <!-- Validation errors -->
+            <span style="color:red">{{ errors.name }}</span>
+          </div>
+          <div class="col-md-4">
+            <!-- Input -->
+            <input type="text" v-model="item.details"><br>
+            <!-- Validation errors -->
+            <span style="color:red">{{ errors.details }}</span>
+          </div>
+          <!-- button click calls hireEmployee -->
+          <div class="col-md-3"><button  class="btn btn-info btn-sm" @click="createItem">Add</button></div>
+      </div>
+          <table class="table">
+          <tr
+          is="item-row" 
+          v-for=" item in items"
+          :item="item">
+          </tr>
+          </table>
+
+    </div>
+	</div>
+	<br/>
+	<img class="animated bounce infinite" src="https://mdbootstrap.com/img/logo/mdb-transparent.png">
+	<script src="/mdbootstrap/js/bootstrap.js"></script>
+	<script src="/mdbootstrap/js/mdb.js"></script>
+	<script src="/mdbootstrap/js/popper.min.js"></script>
+
+  <script type="text/x-template" id="item-row">
+  <tr>
+    <td>
+      <!-- Show input when in edit mode -->
+      <div v-if="editMode">
+        <input type="text" v-model="item.name"><br>
+        <span style="color:red">{{ errors.name }}</span>
+      </div>
+      <div v-else>{{ item.name }}</div>
+    </td>
+    <td>
+      <div v-if="editMode">
+        <input type="text" v-model="item.details"><br>
+        <span style="color:red">{{ errors.details }}</span>
+      </div>
+      <div v-else>{{ item.details }}</div>
+    </td>
+    <td>
+      <!-- Save button calls updateItem -->
+      <button v-if="editMode" @click="updateItem">Save</button>
+      <!-- Edit button puts row into edit mode -->
+      <button v-else @click="editMode = true" class="btn btn-warning btn-sm">Edit</button>
+
+      <button v-if="!editMode" @click="removeItem" style="color:red">Delete</button>
+    </td>
+  </tr>
+</script>
+  </body>
+</html>
