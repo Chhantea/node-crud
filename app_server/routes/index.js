@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var ctrlMain = require('../controllers/main');
-
+var ctrlAxio = require('../controllers/axos');
 /* GET home page. */
 // router.get('/', function(req, res, next) {
 //   res.render('index', { title: 'Express' });
@@ -16,5 +16,6 @@ var ctrlMain = require('../controllers/main');
 
 // another way
 router.get('/', ctrlMain.index);
+router.get('/axos',ctrlAxio.main);
 
 module.exports = router;

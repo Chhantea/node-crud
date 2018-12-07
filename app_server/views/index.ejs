@@ -11,7 +11,8 @@
 	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	  crossorigin="anonymous">  	
 	</script>
-  <script src="/javascripts/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.27/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
   <script src="/javascripts/demo.js"></script>
   </head>
   <body>
@@ -24,13 +25,13 @@
             <!-- Input -->
             <input type="text" v-model="item.name"><br>
             <!-- Validation errors -->
-            <span style="color:red">{{ errors.name }}</span>
+            <span style="color:red">{{errors.name.path}} {{ errors.name.kind }}</span>
           </div>
           <div class="col-md-4">
             <!-- Input -->
             <input type="text" v-model="item.details"><br>
             <!-- Validation errors -->
-            <span style="color:red">{{ errors.details }}</span>
+            <span style="color:red">{{{errors.details.path}} {{ errors.details.kind }}</span>
           </div>
           <!-- button click calls hireEmployee -->
           <div class="col-md-3"><button  class="btn btn-info btn-sm" @click="createItem">Add</button></div>
@@ -70,11 +71,11 @@
     </td>
     <td>
       <!-- Save button calls updateItem -->
-      <button v-if="editMode" @click="updateItem">Save</button>
+      <button v-if="editMode" @click="updateItem" class="btn btn-outline-success btn-sm">Save</button>
       <!-- Edit button puts row into edit mode -->
       <button v-else @click="editMode = true" class="btn btn-warning btn-sm">Edit</button>
 
-      <button v-if="!editMode" @click="removeItem" style="color:red">Delete</button>
+      <button v-if="!editMode" @click="removeItem" class="btn btn-danger btn-sm">Delete</button>
     </td>
   </tr>
 </script>

@@ -56,7 +56,7 @@ var item = new Vue({
 		},
 		errors: {}
 	},
-	mounted: function() {
+	ready: function() {
 		var that; //pawimawh
 		that = this;
 		$.ajax({
@@ -65,7 +65,7 @@ var item = new Vue({
           that.items = res
           that.editMode = false
         },
-        errror: function(res){
+        error: function(res){
           that.errors = res.responseJSON.errors
         }
       });

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/mdbootstrap/css/bootstrap.css' />
+    <link rel='stylesheet' href='/mdbootstrap/css/mdb.css' />
+    <link rel='stylesheet' href='/mdbootstrap/css/mdb.lite.css' />
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+    </script>
+    <script src="/javascripts/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <script src="/javascripts/ax.js"></script>
+</head>
+<body>
+<div class="jumbotron">
+    <h1 class="animated zoomInUp"><%= title %></h1>
+    <p class="animated slideInDown">Welcome to <%= title %></p>
+    <div id="app-2">
+     <ul v-for="item in items">
+         <li>{{item.name}} {{item.details}} {{item.createdAt}}</li>
+     </ul>
+
+    </div>
+</div>
+<br/>
+<img class="animated bounce infinite" src="https://mdbootstrap.com/img/logo/mdb-transparent.png">
+<script src="/mdbootstrap/js/bootstrap.js"></script>
+<script src="/mdbootstrap/js/mdb.js"></script>
+<script src="/mdbootstrap/js/popper.min.js"></script>
+
+
+</body>
+</html>
