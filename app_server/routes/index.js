@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var ctrlMain = require('../controllers/main');
 var ctrlAxio = require('../controllers/axos');
+var ctrlReact = require('../controllers/react');
 /* GET home page. */
 // router.get('/', function(req, res, next) {
 //   res.render('index', { title: 'Express' });
@@ -17,5 +18,6 @@ var ctrlAxio = require('../controllers/axos');
 // another way
 router.get('/', ctrlMain.index);
 router.get('/axos',ctrlAxio.main);
+router.get('/react',ctrlReact.index);
 
 module.exports = router;
