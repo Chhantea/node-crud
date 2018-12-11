@@ -2,45 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f769e890-75fa-4e55-aac4-9b1cc74b1171" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_server/views/react.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/app_server/views/react.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_server/views/react.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontSide/react/demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontSide/react/demo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/time-stamp/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/time-stamp/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/time-stamp/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/time-stamp/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/time-stamp/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-dev-middleware/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-dev-middleware/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-dev-middleware/lib/GetFilenameFromUrl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-dev-middleware/lib/PathJoin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-dev-middleware/lib/Shared.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-dev-middleware/middleware.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-dev-middleware/node_modules/.bin/mime" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-dev-middleware/node_modules/mime/.npmignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-dev-middleware/node_modules/mime/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-dev-middleware/node_modules/mime/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-dev-middleware/node_modules/mime/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-dev-middleware/node_modules/mime/cli.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-dev-middleware/node_modules/mime/mime.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-dev-middleware/node_modules/mime/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-dev-middleware/node_modules/mime/src/build.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-dev-middleware/node_modules/mime/src/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-dev-middleware/node_modules/mime/types.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-dev-middleware/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-hot-middleware/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-hot-middleware/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-hot-middleware/client-overlay.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-hot-middleware/client.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-hot-middleware/helpers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-hot-middleware/middleware.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-hot-middleware/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/webpack-hot-middleware/process-update.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -66,8 +34,8 @@
       <file leaf-file-name="demo.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontSide/react/demo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="221" selection-start-line="221" selection-end-line="221" />
+            <state relative-caret-position="332">
+              <caret line="242" column="54" selection-start-line="242" selection-start-column="54" selection-end-line="242" selection-end-column="54" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -75,11 +43,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name=".babelrc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.babelrc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+            <state relative-caret-position="274">
+              <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -101,8 +78,8 @@
       <file leaf-file-name="react.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_server/views/react.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+            <state relative-caret-position="435">
+              <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -133,14 +110,14 @@
         <option value="$PROJECT_DIR$/app_server/views/axios.ejs" />
         <option value="$PROJECT_DIR$/frontSide/react/demo.jsx" />
         <option value="$PROJECT_DIR$/test.js" />
-        <option value="$PROJECT_DIR$/.babelrc" />
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/react.ejs" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/app_server/views/react.ejs" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/.babelrc" />
         <option value="$PROJECT_DIR$/frontSide/react/demo.js" />
       </list>
     </option>
@@ -254,12 +231,12 @@
       <workItem from="1544432146183" duration="3850000" />
       <workItem from="1544438110818" duration="6100000" />
       <workItem from="1544501324426" duration="200000" />
-      <workItem from="1544502902071" duration="14984000" />
+      <workItem from="1544502902071" duration="19059000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40734000" />
+    <option name="totallyTimeSpent" value="44809000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -272,6 +249,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12848867" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32935324" />
@@ -538,13 +516,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js" />
-    <entry file="file://$PROJECT_DIR$/.babelrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -600,22 +571,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        <state relative-caret-position="274">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_server/views/react.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+        <state relative-caret-position="435">
+          <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.babelrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontSide/react/demo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="221" selection-start-line="221" selection-end-line="221" />
+        <state relative-caret-position="332">
+          <caret line="242" column="54" selection-start-line="242" selection-start-column="54" selection-end-line="242" selection-end-column="54" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>

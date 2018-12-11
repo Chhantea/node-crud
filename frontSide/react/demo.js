@@ -183,7 +183,6 @@ class Table extends React.Component{
         axios.get('/api/item')
             .then(res =>{
                 this.setState({items: res.data});
-                console.log(this.state.items);
             });
     }
     render() {
@@ -219,3 +218,50 @@ class Table extends React.Component{
 
 ReactDOM.render(<Table/>,document.getElementById('tab'));
 // end here
+
+// create class start here
+class Create extends React.Component{
+    constructor(){
+        super();
+        this.state = {
+            name: '',
+            details: ''
+        };
+    }
+    onChange = (e) =>{
+        const state = this.state;
+        state[e.target.name] = e.target.value;
+        this.setState(state);
+    }
+    onSubmit = (e) =>{
+        e.preventDefault();
+        const {name,details} = this.state;
+        axios.post('/api/item',{name,details})
+             .then((result) => {
+                 // this.props.history.push("/")
+                 // this.setState(self.constructor());
+                 console.log(result);
+                 this.setState({item: result.data});
+             });
+    }
+    render(){
+        const {name, details} = this.state;
+        return(
+            <form onSubmit={this.onSubmit}>
+                <div className="form-group">
+                    <label htmlFor="name">Name:</label>
+                    <input type="text" className="form-control" name="name" value={name} onChange={this.onChange}
+                           placeholder="Name"/>
+                </div>
+                <div className="form-group">
+                    <label htmlFor="details">Details:</label>
+                    <textarea type="text"  className="md-textarea form-control" rows="5" value={details} onChange={this.onChange}
+                              placeholder="Title"/>
+                </div>
+                <button type="submit" className="btn btn-default">Create</button>
+            </form>
+        );
+    }
+}
+ReactDOM.render(<Create/>,document.getElementById('create'));
+
