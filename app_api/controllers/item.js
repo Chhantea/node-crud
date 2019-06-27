@@ -5,7 +5,7 @@ var sendJSONresponse = function(res, status, content) {
   res.status(status);
   res.json(content);
 };
-
+//all
 module.exports.item = function(req, res) {
   console.log("Getting All Items");
  Item.find().exec(function(err,item){
@@ -67,6 +67,24 @@ module.exports.itemUpdateOne = function(req, res) {
         });
       }
   );
+};
+module.exports.itemShow =function (req,res) {
+    if (!req.params.itemId){
+        sendJSONresponse(res, 404, {
+            "message": "Not found, itemID is required"
+        });
+        return;
+    }
+    Item.findById(req.params.itemId)
+        .exec(function(err,item){
+            if(err){
+                console.log(err);
+                sendJSONresponse(res, 400, err);
+            }else{
+                console.log(item);
+                sendJSONresponse(res, 201, item);
+            }
+        });
 };
 
 

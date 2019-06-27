@@ -46,3 +46,10 @@ process.on('SIGTERM', function() {
 });
 
 require('./items');
+require('./carts');
+require('./comments');
+require('./schedules');
+require('./offers');
+require('./orders');
+require('./Inbox');
+require('./indexdashboardcontents');

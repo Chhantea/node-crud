@@ -73,7 +73,7 @@ function ActionLink() {
         console.log('this link got clicked');
     }
     return (
-        <a href="#" onClick={handleClick} className='btn btn-amber'>Click Me </a>
+        <a href="#" onClick={handleClick} className='btn btn-amber'>Click this now </a>
     );
 }
 ReactDOM.render(<ActionLink/>, document.getElementById('click'));
@@ -180,7 +180,7 @@ class Table extends React.Component{
        }
     }
     componentDidMount(){
-        axios.get('/api/item')
+        axios.get('http://localhost:3000/api/item')
             .then(res =>{
                 this.setState({items: res.data});
             });
@@ -236,7 +236,7 @@ class Create extends React.Component{
     onSubmit = (e) =>{
         e.preventDefault();
         const {name,details} = this.state;
-        axios.post('/api/item',{name,details})
+        axios.post('http://localhost:3000/api/item',{name,details})
              .then((result) => {
                  // this.props.history.push("/")
                  // this.setState(self.constructor());
@@ -255,8 +255,8 @@ class Create extends React.Component{
                 </div>
                 <div className="form-group">
                     <label htmlFor="details">Details:</label>
-                    <textarea type="text"  className="md-textarea form-control" rows="5" value={details} onChange={this.onChange}
-                              placeholder="Title"/>
+                    <textarea type="text" name='details' className="md-textarea form-control" rows="5" value={details} onChange={this.onChange}
+                              placeholder="Enter any details"/>
                 </div>
                 <button type="submit" className="btn btn-default">Create</button>
             </form>

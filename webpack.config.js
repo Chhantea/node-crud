@@ -1,6 +1,7 @@
 module.exports = options => {
     return {
-        entry: './frontSide/react/demo.js',
+        mode: 'production',
+        entry: './src',
         output: {
             filename: 'bundle.js',
         },
