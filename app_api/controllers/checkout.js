@@ -54,3 +54,8 @@ module.exports.checkout = function(req, res) {
         }
     });
 };
+
+module.exports.psuccess = function(req, res, next) {
+    console.log("return data", req.body);
+    sendJsonResponse(res, 200, { "message" : req.body});
+};

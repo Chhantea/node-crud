@@ -71,5 +71,6 @@ router.delete('/contentdashboard/:styleId/content/:contentId',ctrlindexdashboard
 //end
 //checkout
 router.post('/checkout',ctrlCheckout.checkout);
+router.post('/callback',ctrlCheckout.psuccess);
 
 module.exports = router;
