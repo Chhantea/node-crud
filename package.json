@@ -18,6 +18,7 @@
     "ejs-locals": "^1.0.2",
     "express": "~4.16.0",
     "express-ws": "^4.0.0",
+    "fs": "0.0.1-security",
     "http-errors": "~1.6.2",
     "less-middleware": "~2.2.1",
     "mongoose": "^5.3.15",

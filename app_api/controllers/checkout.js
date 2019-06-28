@@ -1,4 +1,6 @@
+var mongoose = require('mongoose');
 var paypal = require('paypal-rest-sdk');
+var recordList = mongoose.model('Record');
 
 var sendJsonResponse = function (res, status, content) {
     res.status(status);
@@ -8,8 +10,8 @@ module.exports.checkout = function(req, res) {
     console.log("dello m")
     paypal.configure({
         'mode': 'sandbox', //sandbox or live
-        'client_id': 'AW1oLX4vxRvKUuHZafblNQftrcVCjorEQtqtbbXiyll1ED7bkqK3rymkcM0nBfvq_c3P66zAUf0Y2dAO',
-        'client_secret': 'EKXwkMeC0jjVjGBP_nE8znLGd3-_dvjeY7qIZpO9Ee73n5Dap4z9GYNvpcZJm0Bp7oF6tObcyI-P3P2e'
+        'client_id': '#',
+        'client_secret': '#'
     });
     var create_payment_json = {
         "intent": "sale",
@@ -56,6 +58,15 @@ module.exports.checkout = function(req, res) {
 };
 
 module.exports.psuccess = function(req, res, next) {
-    console.log("return data", req.body);
-    sendJsonResponse(res, 200, { "message" : req.body});
+    // var data = req.body.toString();
+    recordList.create({
+        record:   JSON.stringify(req.body)
+    }, function(err, recordList) {
+        if (err) {
+            sendJsonResponse(res, 400, err);
+        } else {
+            sendJsonResponse(res, 201, recordList);
+        }
+    });
+
 };

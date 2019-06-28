@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var gracefulShutdown;
-var dbURI = 'mongodb://54.197.6.32/two';
+var dbURI = 'mongodb://127.0.0.1/two';
 // if (process.env.NODE_ENV === 'production') {
 //     dbURI = process.env.MONGOLAB_URI;
 // }
@@ -52,4 +52,5 @@ require('./schedules');
 require('./offers');
 require('./orders');
 require('./Inbox');
+require('./records');
 require('./indexdashboardcontents');
